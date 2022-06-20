@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons8-hangman-32.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="github">
+                <a href="https://github.com/R34prZ" target="_blank">
+                    <img class="logo-github" src="./images/GitHub-Mark-Light-120px-plus.png" alt="Logo do GitHub">
+                    <h2 class="titulo-padrao">R34prZ</h2>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu">
+            <div class="apresentacao-jogo">
+                <img src="./images/icons8-hangman-64.png" alt="Desenho de uma forca" class="forca-imagem">
+                <h1 class="titulo-padrao titulo-jogo">Jogo da Forca</h1>
+            </div>
+
+            <div class="opcoes">
+                <button class="btn-padrao btn-jogar">
+                    <p class="texto-padrao">Começar a Jogar</p>
+                </button>
+                <button class="btn-padrao btn-adcPalavra">
+                    <p class="texto-padrao">Adicionar palavra</p>
+                </button>
+            </div>
+
+            <div class="flecha">
+                <img src="./images/down-arrow-svgrepo-com.svg" alt="Flecha Apontando para flecha-baixo"
+                    class="flecha-baixo">
+            </div>
+        </div>
+
+        <div class="jogo invisivel"></div>
+    </main>
+
+    <footer>
+        <div class="sobre">
+            <h2 class="subtitulo-padrao">Sobre</h2>
+            <p class="texto-padrao">WebSite e jogo feitos por Gabriel RQ</p>
+            <p class="texto-padrao">Usando HTML, CSS e Javascript</p>
+            <p class="texto-padrao">Esse WebSite foi feito para um <a
+                    href="https://www.alura.com.br/challenges/oracle-one/" target="_blank">Challenge</a></p>
+            <p class="texto-padrao">do programa <a href="https://www.oracle.com/br/education/oracle-next-education/"
+                    target="_blank">Alura + Oracle ONE</a></p>
+        </div>
+
+        <div class="repo">
+            <h2 class="subtitulo-padrao">Repositório do GitHub</h2>
+            <p class="texto-padrao">Aproveite e me siga!</p>
+            <div class="github">
+                <a href="https://github.com/R34prZ" target="_blank">
+                    <img class="logo-github" src="./images/GitHub-Mark-Light-120px-plus.png" alt="Logo do GitHub">
+                </a>
+            </div>
+        </div>
+
+        <div class="creditos">
+            <h2 class="subtitulo-padrao">Créditos</h2>
+            <a target="_blank" href="https://icons8.com/icon/rqZZC0XAQZb0/hangman">Hangman</a> icone por <a
+                target="_blank" href="https://icons8.com">Icons8</a>
+
+            <p>Icone da <a href="https://www.svgrepo.com/svg/12331/down-arrow" target="_blank">flecha apontando para
+                    baixo</a> por <a href="https://www.svgrepo.com/" target="_blank">svgrepo</a></p>
+        </div>
+
+        <div class="tags">
+            <p class="texto-padrao"><span class="hashtag">#</span> Alura</p>
+            <p class="texto-padrao"><span class="hashtag">#</span> Oracle ONE</p>
+            <p class="texto-padrao"><span class="hashtag">#</span> Programação</p>
+        </div>
+
+        <div class="extra">
+            <p class="texto-padrao">Gabriel RQ</p>
+            <p class="texto-padrao">2022</p>
+        </div>
+
+        <div class="wave-anim">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <style>
+                    .path-0 {
+                        animation: pathAnim-0 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes pathAnim-0 {
+                        0% {
+                            d: path("M 0,500 C 0,500 0,250 0,250 C 61.882051282051265,217.56153846153848 123.76410256410253,185.12307692307692 215,180 C 306.23589743589747,174.87692307692308 426.82564102564106,197.06923076923076 518,218 C 609.1743589743589,238.93076923076924 670.9333333333333,258.6 747,258 C 823.0666666666667,257.4 913.4410256410256,236.53076923076918 990,228 C 1066.5589743589744,219.46923076923082 1129.3025641025642,223.27692307692308 1202,229 C 1274.6974358974358,234.72307692307692 1357.3487179487179,242.36153846153846 1440,250 C 1440,250 1440,500 1440,500 Z");
+                        }
+
+                        25% {
+                            d: path("M 0,500 C 0,500 0,250 0,250 C 80.95641025641024,206.04615384615386 161.91282051282047,162.09230769230768 230,163 C 298.0871794871795,163.90769230769232 353.3051282051282,209.6769230769231 440,214 C 526.6948717948718,218.3230769230769 644.8666666666667,181.19999999999996 741,201 C 837.1333333333333,220.80000000000004 911.228205128205,297.523076923077 992,333 C 1072.771794871795,368.476923076923 1160.220512820513,362.70769230769224 1236,342 C 1311.779487179487,321.29230769230776 1375.8897435897434,285.6461538461539 1440,250 C 1440,250 1440,500 1440,500 Z");
+                        }
+
+                        50% {
+                            d: path("M 0,500 C 0,500 0,250 0,250 C 89.72564102564107,197.05897435897435 179.45128205128213,144.11794871794874 249,174 C 318.54871794871787,203.88205128205126 367.9205128205127,316.58717948717947 450,322 C 532.0794871794873,327.41282051282053 646.8666666666668,225.53333333333333 734,212 C 821.1333333333332,198.46666666666667 880.6128205128205,273.27948717948726 955,313 C 1029.3871794871795,352.72051282051274 1118.6820512820514,357.34871794871793 1202,341 C 1285.3179487179486,324.65128205128207 1362.6589743589743,287.32564102564106 1440,250 C 1440,250 1440,500 1440,500 Z");
+                        }
+
+                        75% {
+                            d: path("M 0,500 C 0,500 0,250 0,250 C 104.40512820512822,264.89230769230767 208.81025641025644,279.7846153846154 282,264 C 355.18974358974356,248.2153846153846 397.16410256410256,201.75384615384615 476,188 C 554.8358974358974,174.24615384615385 670.5333333333333,193.2 753,220 C 835.4666666666667,246.8 884.7025641025641,281.44615384615383 959,307 C 1033.297435897436,332.55384615384617 1132.6564102564103,349.01538461538456 1217,338 C 1301.3435897435897,326.98461538461544 1370.6717948717949,288.4923076923077 1440,250 C 1440,250 1440,500 1440,500 Z");
+                        }
+
+                        100% {
+                            d: path("M 0,500 C 0,500 0,250 0,250 C 61.882051282051265,217.56153846153848 123.76410256410253,185.12307692307692 215,180 C 306.23589743589747,174.87692307692308 426.82564102564106,197.06923076923076 518,218 C 609.1743589743589,238.93076923076924 670.9333333333333,258.6 747,258 C 823.0666666666667,257.4 913.4410256410256,236.53076923076918 990,228 C 1066.5589743589744,219.46923076923082 1129.3025641025642,223.27692307692308 1202,229 C 1274.6974358974358,234.72307692307692 1357.3487179487179,242.36153846153846 1440,250 C 1440,250 1440,500 1440,500 Z");
+                        }
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
+                        <stop offset="5%" stop-color="#9900efff"></stop>
+                        <stop offset="95%" stop-color="#7bdcb5ff"></stop>
+                    </linearGradient>
+                </defs>
+                <path
+                    d="M 0,500 C 0,500 0,250 0,250 C 61.882051282051265,217.56153846153848 123.76410256410253,185.12307692307692 215,180 C 306.23589743589747,174.87692307692308 426.82564102564106,197.06923076923076 518,218 C 609.1743589743589,238.93076923076924 670.9333333333333,258.6 747,258 C 823.0666666666667,257.4 913.4410256410256,236.53076923076918 990,228 C 1066.5589743589744,219.46923076923082 1129.3025641025642,223.27692307692308 1202,229 C 1274.6974358974358,234.72307692307692 1357.3487179487179,242.36153846153846 1440,250 C 1440,250 1440,500 1440,500 Z"
+                    stroke="none" stroke-width="0" fill="url(#gradient)"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            </svg>
+        </div>
+    </footer>
+
+    <script src="./js/jogar.js">console.log("Módulo JOGAR carregado.")</script>
+    <script src="./js/adicionarPalavra.js">console.log("Módulo ADICIONAR PALAVRA carregado.")</script>
+</body>
+
+</html>

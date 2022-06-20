@@ -1,0 +1,218 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Regular  400; Medium 500; SemiBold 600; Bold 700 */
+
+body {
+    /* fonte */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+
+    /* Variáveis */
+    --cor-destaque: #802bb1;
+    --cor-fundo-principal: #121212;
+    --cor-titulo-padrao: #c3c2cf;
+    --cor-texto-padrao: #cccbd1;
+
+    /* Fundo e texto */
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-padrao);
+}
+
+/* padrões */
+.titulo-padrao {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--cor-titulo-padrao);
+}
+
+.subtitulo-padrao {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--cor-titulo-padrao);
+}
+
+.texto-padrao {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cor-texto-padrao);
+}
+
+.btn-padrao {
+    border: none;
+    background-color: var(--cor-destaque);
+    border-radius: 1.5em;
+    width: 248px;
+    height: 6em;
+    cursor: pointer;
+    transition: transform .5s, background 1s;
+}
+
+.btn-padrao:hover, .btn-padrao:focus {
+    transform: scale(1.05);
+    background-color: #7422a3;
+}
+
+.invisivel {
+    display: none;
+}
+
+/* Link para o github */
+.github {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    vertical-align: middle;
+}
+
+.github a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github .titulo-padrao {
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+
+.logo-github {
+    height: 2em;
+}
+
+/* Estilização do body */
+
+/* Estilização do menu inicial */
+.apresentacao-jogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -15%);
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.opcoes .btn-padrao {
+    margin: 0 0 2em 0;
+}
+
+.opcoes .btn-padrao .texto-padrao {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.opcoes .btn-padrao:last-child {
+    border: var(--cor-destaque) solid;
+    border-width: 0.25em;
+    background-color: transparent;
+}
+
+.opcoes .btn-padrao:last-child .texto-padrao {
+    color: var(--cor-destaque);
+}
+
+/* Define uma animação para fazer a flecha ir para baixo e voltar */
+@keyframes animar-flecha {
+    0% {
+        transform: translate(-50%, -75%);
+    }
+    100% {
+        transform: translate(-50%, 50%);
+    }
+}
+
+.flecha-baixo {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(37%) saturate(4641%) hue-rotate(265deg) brightness(98%) contrast(96%);
+    width: 2em;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+
+    animation: animar-flecha 1s ease-in-out infinite alternate;
+}
+
+/* Estilização do jogo */
+.jogo {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Estilização do footer */
+footer {
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sobre {
+    margin: 0 0 2em 0;
+    line-height: 2em;
+}
+
+.sobre a {
+    text-decoration: none;
+}
+
+.repo {
+    line-height: 2em;
+}
+
+.repo .github {
+    position: inherit; 
+    margin: .5em 0 0 0;
+}
+
+.creditos {
+    margin: 2em 0 0 0;
+    line-height: 2em;
+}
+
+.creditos a {
+    display: inline;
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+.tags {
+    margin: 2em 0 0 0;
+}
+
+.extra {
+    position: absolute;
+    bottom: 1em;
+}
+
+.hashtag {
+    color: var(--cor-destaque);
+}
+
+.wave-anim {
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+
+
+
