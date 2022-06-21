@@ -24,7 +24,7 @@
     </header>
 
     <main>
-        <div class="menu">
+        <section class="menu invisivel">
             <div class="apresentacao-jogo">
                 <img src="./images/icons8-hangman-64.png" alt="Desenho de uma forca" class="forca-imagem">
                 <h1 class="titulo-padrao titulo-jogo">Jogo da Forca</h1>
@@ -43,9 +43,11 @@
                 <img src="./images/down-arrow-svgrepo-com.svg" alt="Flecha Apontando para flecha-baixo"
                     class="flecha-baixo">
             </div>
-        </div>
+        </section>
 
-        <div class="jogo invisivel"></div>
+        <section class="jogo ">
+            <canvas id="tabuleiro"></canvas>
+        </section>
     </main>
 
     <footer>
@@ -135,8 +137,10 @@
         </div>
     </footer>
 
-    <script src="./js/jogar.js">console.log("Módulo JOGAR carregado.")</script>
-    <script src="./js/adicionarPalavra.js">console.log("Módulo ADICIONAR PALAVRA carregado.")</script>
+    <script src="./js/palavras.js"></script>
+    <script src="./js/desenhaTabuleiro.js"></script>
+    <script src="./js/adicionarPalavra.js"></script>
+    <script src="./js/jogar.js"></script>
 </body>
 
 </html>

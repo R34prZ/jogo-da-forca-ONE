@@ -54,10 +54,6 @@ body {
     background-color: #7422a3;
 }
 
-.invisivel {
-    display: none;
-}
-
 /* Link para o github */
 .github {
     position: absolute;
@@ -152,6 +148,16 @@ body {
 .jogo {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tabuleiro {
+    width: 80%;
+    height: 70%;
+    /* max-width: 1200px; */
+    /* max-height: 800px; */
 }
 
 /* Estilização do footer */
@@ -213,6 +219,9 @@ footer {
     max-width: 100vw;
 }
 
-
+/* Classe para deixar invisível tem que ficar aqui em baixo pra funcionar bem */
+.invisivel {
+    display: none;
+}
 
 
