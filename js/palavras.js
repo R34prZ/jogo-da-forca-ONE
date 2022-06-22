@@ -89,6 +89,14 @@ let palavras = {
     ]
 };
 
-function receberPalavras() {
-    return palavras
+function sortearPalavra() {
+    // sorteia a categoria da palavra
+    let numCategorias = Object.keys(palavras).length;
+    let categoria = Object.keys(palavras)[Math.floor(Math.random() * numCategorias)];
+
+    // sorteia a palavra a partir do array da categoria
+    let numPalavras = palavras[categoria].length;
+    let palavra = palavras[categoria][Math.floor(Math.random() * numPalavras)];
+
+    return {"palavra": palavra, "categoria": categoria};
 }

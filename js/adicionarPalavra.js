@@ -1,4 +1,3 @@
-palavras = receberPalavras();
 
 function adicionarPalavra(palavra, classe) {
     palavras[classe].push(palavra);

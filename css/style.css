@@ -148,16 +148,12 @@ body {
 .jogo {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 #tabuleiro {
-    width: 80%;
-    height: 70%;
-    /* max-width: 1200px; */
-    /* max-height: 800px; */
+    max-width: 1200px;
+    max-height: 800px;
 }
 
 /* Estilização do footer */
@@ -224,4 +220,11 @@ footer {
     display: none;
 }
 
+
+/* @media screen and (min-device-width: 359px) and (max-device-width: 450px) {
+    #tabuleiro {
+        width: 400px;
+        height: 400px;
+    }
+} */
 
