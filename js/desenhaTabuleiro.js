@@ -96,8 +96,7 @@ function desenhaTraco(palavra) {
         // Se houver um espaço e não for a primeira letra da linha, dar um espaço
         if (palavra[i] == " " && x != POS_X) {
             x += 50;
-            espaco = true;
-            console.log("Fazendo espaço...");    
+            espaco = true;  
             continue;
         }
         // Pula para a próxima linha
@@ -105,14 +104,11 @@ function desenhaTraco(palavra) {
             // desenha um risco indicando que a palavra continua na próxima linha
             if (!espaco && palavra[i + 1] != " " && (i + 1) < palavra.length) {
                 pincel.fillRect(x, y - 15, 15, 2);
-                console.log("Fazendo traço...");
             }
             x = POS_X;
             y += 50;
-            console.log("Pulando linha...");
         }
 
-        console.log(`Indice: ${i}\nLetra: ${palavra[i]}\nX: ${x} Y: ${y}`);
         pincel.fillRect(x, y, tamanhoTraco, 3);
         x += 50;
         espaco = false;
@@ -135,8 +131,8 @@ function escreveLetras(palavra) {
         }
 
         if (x > X_MAX) {
-            y += 50;
             x = POS_X;
+            y += 50;
         }
 
         // escreve a letra (em maiúsculo)

@@ -160,7 +160,7 @@ a {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    margin: 0 0 2em 0;
+    margin: 0 0 6em 0;
 }
 
 #tabuleiro {
@@ -182,15 +182,8 @@ a {
     color: var(--cor-destaque);
 }
 
-/* Estilização do footer */
-footer {
-    position: relative;
-    overflow-x: hidden;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/* Estilização da sessão de informações */
+.info {
     text-align: center;
 }
 
@@ -215,6 +208,18 @@ footer {
 
 .creditos a {
     display: inline;
+}
+
+/* Estilização do footer */
+footer {
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .tags {
