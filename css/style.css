@@ -47,6 +47,8 @@ a {
 .btn-padrao {
     border: none;
     background-color: var(--cor-destaque);
+    color: var(--cor-titulo-padrao);
+    font-weight: 600;
     border-radius: 1.5em;
     width: 248px;
     height: 6em;
@@ -57,6 +59,11 @@ a {
 .btn-padrao:hover, .btn-padrao:focus {
     transform: scale(1.05);
     background-color: #7422a3;
+}
+
+.btn-padrao .texto-padrao {
+    font-size: 1.25em;
+    font-weight: 600;
 }
 
 .invisivel {
@@ -117,11 +124,6 @@ a {
     margin: 0 0 2em 0;
 }
 
-.opcoes .btn-padrao .texto-padrao {
-    font-size: 1.25em;
-    font-weight: 600;
-}
-
 .opcoes .btn-padrao:last-child {
     border: var(--cor-destaque) solid;
     border-width: 0.25em;
@@ -158,6 +160,7 @@ a {
     width: 100vw;
     height: 100vh;
     text-align: center;
+    margin: 0 0 2em 0;
 }
 
 #tabuleiro {
@@ -165,12 +168,18 @@ a {
     max-height: 800px;
 }
 
-.entrada {
-    width: 0;
-    height: 0;
-    border: none;
-    outline: none;
-    display: inline;
+.btn-reiniciar {
+    margin: 0 1em 0 0;
+}
+
+.jogo .btn-padrao:last-child {
+    border: var(--cor-destaque) solid;
+    border-width: 0.25em;
+    background-color: transparent;
+}
+
+.jogo .btn-padrao:last-child .texto-padrao {
+    color: var(--cor-destaque);
 }
 
 /* Estilização do footer */

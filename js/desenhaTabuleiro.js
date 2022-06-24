@@ -3,7 +3,10 @@ const pincel = canvasTabuleiro.getContext("2d");
 
 pincel.fillStyle = "#802bb1";
 pincel.strokeStyle = "#802bb1";
-pincel.font = "600 24px Poppins"
+pincel.font = "600 24px Poppins";
+
+const larguraCanvas = canvasTabuleiro.width;
+const alturacanvas = canvasTabuleiro.height;
 
 function desenhaForca() {
     pincel.fillRect(450, 350, 300, 5); // base
@@ -149,17 +152,18 @@ pincel.textAlign = "center";
 function escreveDica(dica) {
     let dicaTexto = `Dica: ${dica}`;
     // let larguraDica = pincel.measureText(dicaTexto).width;
-    pincel.fillText(dicaTexto, (canvasTabuleiro.width / 2), 390);
+    pincel.fillText(dicaTexto, (larguraCanvas / 2), 390);
 }
 
-// desenhaForca();
-// desenhaCabeca();
-// desenhaCorpo();
-// desenhaBracoEsquerdo();
-// desenhaBracoDireito();
-// desenhaPernaEsquerda();
-// desenhaPernaDireita();
+// Funcção genérica para escrever uma mensagem qualquer em uma posição x, y
+function escreve(msg, x, y) {
+    pincel.fillText(msg, x, y);
+}
 
-// let texto = "    a";
-// desenhaTraco("cara");
-// escreveLetras(texto);
+function limpaDica() {
+    pincel.clearRect(0, 370, larguraCanvas, 50);
+}
+
+function limpaCanvas() {
+    pincel.clearRect(0, 0, larguraCanvas, alturacanvas);
+}
