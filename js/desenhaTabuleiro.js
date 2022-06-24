@@ -1,5 +1,5 @@
-let canvasTabuleiro = document.querySelector("#tabuleiro");
-let pincel = canvasTabuleiro.getContext("2d");
+const canvasTabuleiro = document.querySelector("#tabuleiro");
+const pincel = canvasTabuleiro.getContext("2d");
 
 pincel.fillStyle = "#802bb1";
 pincel.strokeStyle = "#802bb1";
@@ -137,19 +137,29 @@ function escreveLetras(palavra) {
         }
 
         // escreve a letra (em maiúsculo)
-        pincel.fillText(palavra[i].toUpperCase(), x + 10, y - 10);
+        pincel.fillText(palavra[i].toUpperCase(), x + 20, y - 10);
         x += 50;
     }
 }
 
-desenhaForca();
-desenhaCabeca();
-desenhaCorpo();
-desenhaBracoEsquerdo();
-desenhaBracoDireito();
-desenhaPernaEsquerda();
-desenhaPernaDireita();
+// alinha o texto a partir do centro
+pincel.textBaseLine = "midle";
+pincel.textAlign = "center";
 
-let texto = sortearPalavra().palavra;
-desenhaTraco(texto);
-escreveLetras(texto);
+function escreveDica(dica) {
+    let dicaTexto = `Dica: ${dica}`;
+    // let larguraDica = pincel.measureText(dicaTexto).width;
+    pincel.fillText(dicaTexto, (canvasTabuleiro.width / 2), 390);
+}
+
+// desenhaForca();
+// desenhaCabeca();
+// desenhaCorpo();
+// desenhaBracoEsquerdo();
+// desenhaBracoDireito();
+// desenhaPernaEsquerda();
+// desenhaPernaDireita();
+
+// let texto = "    a";
+// desenhaTraco("cara");
+// escreveLetras(texto);

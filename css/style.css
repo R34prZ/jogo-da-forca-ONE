@@ -39,6 +39,11 @@ body {
     color: var(--cor-texto-padrao);
 }
 
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
 .btn-padrao {
     border: none;
     background-color: var(--cor-destaque);
@@ -47,7 +52,7 @@ body {
     height: 6em;
     cursor: pointer;
     transition: transform .5s, background 1s ease-out;
-}/* Classe para deixar invisível tem que ficar aqui em baixo pra funcionar bem */
+}
 
 .btn-padrao:hover, .btn-padrao:focus {
     transform: scale(1.05);
@@ -160,6 +165,14 @@ body {
     max-height: 800px;
 }
 
+.entrada {
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    display: inline;
+}
+
 /* Estilização do footer */
 footer {
     position: relative;
@@ -175,10 +188,6 @@ footer {
 .sobre {
     margin: 0 0 2em 0;
     line-height: 2em;
-}
-
-.sobre a {
-    text-decoration: none;
 }
 
 .repo {
@@ -197,8 +206,6 @@ footer {
 
 .creditos a {
     display: inline;
-    text-decoration: none;
-    color: var(--cor-destaque);
 }
 
 .tags {

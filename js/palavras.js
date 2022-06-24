@@ -32,7 +32,7 @@ let palavras = {
         "AGULHA",
         "ALFINETE",
         "ANEL",
-        "ALMOFODA",
+        "ALMOFADA",
         "COPO",
         "PENTE",
         "ESCOVA",
