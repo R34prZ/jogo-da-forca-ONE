@@ -116,6 +116,7 @@ function desenhaTraco(palavra) {
 }
 
 function escreveLetras(palavra) {
+    pincel.font = "600 24px Poppins";
 
     let x = POS_X;
     let y = POS_Y;
@@ -141,11 +142,22 @@ function escreveLetras(palavra) {
     }
 }
 
+function escreveErradas(palavra) {
+    let y = 530;
+
+    pincel.font = "400 16px Poppins";
+
+    pincel.clearRect(0, y - 15, larguraCanvas, 20);
+    pincel.fillText(palavra, larguraCanvas / 2, y);
+}
+
 // alinha o texto a partir do centro
 pincel.textBaseLine = "midle";
 pincel.textAlign = "center";
 
 function escreveDica(dica) {
+    pincel.font = "600 24px Poppins";
+
     let dicaTexto = `Dica: ${dica}`;
     // let larguraDica = pincel.measureText(dicaTexto).width;
     pincel.fillText(dicaTexto, (larguraCanvas / 2), 390);
@@ -153,6 +165,8 @@ function escreveDica(dica) {
 
 // Funcção genérica para escrever uma mensagem qualquer em uma posição x, y
 function escreve(msg, x, y) {
+    pincel.font = "600 24px Poppins";
+
     pincel.fillText(msg, x, y);
 }
 

@@ -29,6 +29,7 @@ let erros = 0;
 let palavrasUsadas = [];
 let letrasUsadas = [];
 let letrasDescobertas = [];
+let letrasErradas = []
 let palavraDescoberta;
 
 let palavraObjeto = sortearPalavra();
@@ -61,7 +62,11 @@ function teclaHandler(event) {
 
     console.log("Letra pressionada: " + e);
     if (validaLetra(e)) {
-        if (!palavra.includes(e)) erros++;
+        if (!palavra.includes(e)) {
+            erros++;
+            letrasErradas.push(e);
+        }
+
         letrasUsadas.push(e);
         letrasDescobertas = checarLetra(e, palavra);
 
@@ -86,14 +91,13 @@ function checarLetra(e, palavra) {
 
     for (let i = 0; i < palavra.length; i++) {
         if (letrasCorretas[i] == e) {
-            // letrasCorretas[i] = e;
             letrasDescobertas[i] = e;
         }
         else letrasCorretas[i] = " ";
-
     }
     letrasCorretas = letrasCorretas.join("");
     escreveLetras(letrasCorretas);
+    escreveErradas(letrasErradas.join(" "));
 
     return letrasDescobertas;
 }
@@ -115,6 +119,7 @@ function resetarJogo() {
     erros = 0;
     letrasUsadas = [];
     letrasDescobertas = [];
+    letrasErradas = [];
     palavraDescoberta = "";
     palavraObjeto = sortearPalavra();
 

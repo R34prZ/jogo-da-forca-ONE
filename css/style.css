@@ -11,12 +11,33 @@ body {
 
     /* Variáveis */
     --cor-destaque: #802bb1;
-    --cor-fundo-principal: #121212;
+    --cor-fundo-principal-escuro: #121212;
+    --cor-fundo-principal-claro: #dee4e7;
+
+    --cor-titulo-escuro: #c3c2cf;
+    --cor-texto-escuro: #cccbd1;
+
+    --cor-titulo-claro: #222222;
+    --cor-texto-claro: #2f3030;
+
     --cor-titulo-padrao: #c3c2cf;
     --cor-texto-padrao: #cccbd1;
 
+    transition: background-color .8s ease-in-out; 
+}
+
+.modo-escuro {
     /* Fundo e texto */
-    background-color: var(--cor-fundo-principal);
+    --cor-titulo-padrao: var(--cor-titulo-escuro);
+    --cor-texto-padrao: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo-principal-escuro);
+    color: var(--cor-texto-padrao);
+}
+
+.modo-claro {
+    --cor-titulo-padrao: var(--cor-titulo-claro);
+    --cor-texto-padrao: var(--cor-texto-claro);
+    background-color: var(--cor-fundo-principal-claro);
     color: var(--cor-texto-padrao);
 }
 
@@ -64,11 +85,14 @@ a {
 .btn-padrao .texto-padrao {
     font-size: 1.25em;
     font-weight: 600;
+    color: var(--cor-texto-escuro);
 }
 
 .invisivel {
     display: none;
 }
+
+/* Estilização do header */
 
 /* Link para o github */
 .github {
@@ -92,7 +116,43 @@ a {
 }
 
 .logo-github {
+    background-image: url(../images/GitHub-Mark-Light-120px-plus.png);
+    background-size: 2em;
+    /* background-repeat: no-repeat; */
+    background-position: center;
     height: 2em;
+    width: 2em;
+}
+
+.modo-claro .logo-github {
+    background-image: url(../images/GitHub-Mark-120px-plus.png);
+}
+
+/* Estilo do botão para trocar entere modo escuro/claro */
+
+.trocar-cor {
+    background-image: url(../images/icons8-sun-64.png);
+    background-repeat: no-repeat;
+    background-size: 2.5em;
+    background-position: center;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 2.5em;
+    height: 2.5em;
+    transition: background-image .5s ease-in;
+}
+
+.modo-claro .trocar-cor {
+    background-image: url(../images/icons8-moon-64.png);
+    background-repeat: no-repeat;
+    background-size: 2.5em;
+    background-position: center;
+}
+
+.trocar-cor:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 /* Estilização do body */
@@ -206,10 +266,6 @@ a {
     line-height: 2em;
 }
 
-.creditos a {
-    display: inline;
-}
-
 /* Estilização do footer */
 footer {
     position: relative;
@@ -226,7 +282,7 @@ footer {
     margin: 2em 0 0 0;
 }
 
-.extra {
+.criador {
     position: absolute;
     bottom: 1em;
 }

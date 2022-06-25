@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="modo-escuro">
     <header>
         <nav>
             <div class="github">
                 <a href="https://github.com/R34prZ" target="_blank">
-                    <img class="logo-github" src="./images/GitHub-Mark-Light-120px-plus.png" alt="Logo do GitHub">
+                    <div class="logo-github"></div>
                     <h2 class="titulo-padrao">R34prZ</h2>
                 </a>
             </div>
+
+            <div class="trocar-cor"></div>
         </nav>
     </header>
 
@@ -65,22 +67,28 @@
                 <p class="texto-padrao">do programa <a href="https://www.oracle.com/br/education/oracle-next-education/"
                         target="_blank">Alura + Oracle ONE</a></p>
             </div>
-        
+
             <div class="repo">
                 <h2 class="subtitulo-padrao">Repositório do GitHub</h2>
                 <p class="texto-padrao">Aproveite e me siga!</p>
                 <div class="github">
-                    <a href="https://github.com/R34prZ" target="_blank">
-                        <img class="logo-github" src="./images/GitHub-Mark-Light-120px-plus.png" alt="Logo do GitHub">
+                    <a href="https://github.com/R34prZ/jogo-da-forca-ONE" target="_blank">
+                        <div class="logo-github"></div>
                     </a>
                 </div>
             </div>
-        
+
             <div class="creditos">
                 <h2 class="subtitulo-padrao">Créditos</h2>
-                <a target="_blank" href="https://icons8.com/icon/rqZZC0XAQZb0/hangman">Hangman</a> icone por <a
-                    target="_blank" href="https://icons8.com">Icons8</a>
-        
+                <p><a target="_blank" href="https://icons8.com/icon/rqZZC0XAQZb0/hangman">Hangman</a> icone por <a
+                        target="_blank" href="https://icons8.com">Icons8</a></p>
+
+                <p><a target="_blank" href="https://icons8.com/icon/Btwqi2V01261/moon">Moon</a> icone por <a
+                        target="_blank" href="https://icons8.com">Icons8</a></p>
+
+                <p><a target="_blank" href="https://icons8.com/icon/8iPhbBGF35Xv/sun">Sun</a> icone por <a
+                        target="_blank" href="https://icons8.com">Icons8</a></p>
+
                 <p>Icone da <a href="https://www.svgrepo.com/svg/12331/down-arrow" target="_blank">flecha apontando para
                         baixo</a> por <a href="https://www.svgrepo.com/" target="_blank">svgrepo</a></p>
             </div>
@@ -94,7 +102,7 @@
             <p class="texto-padrao"><span class="hashtag">#</span> Programação</p>
         </div>
 
-        <div class="extra">
+        <div class="criador">
             <p class="texto-padrao">Gabriel RQ</p>
             <p class="texto-padrao">2022</p>
         </div>
@@ -145,6 +153,7 @@
         </div>
     </footer>
 
+    <script src="./js/trocarCor.js"></script>
     <script src="./js/palavras.js"></script>
     <script src="./js/desenhaTabuleiro.js"></script>
     <script src="./js/adicionarPalavra.js"></script>
