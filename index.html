@@ -36,7 +36,7 @@
                 <button class="btn-padrao btn-jogar">
                     <p class="texto-padrao">Começar a Jogar</p>
                 </button>
-                <button class="btn-padrao btn-adcPalavra btn-transparente">
+                <button class="btn-padrao btn-adcPalavra">
                     <p class="texto-padrao">Adicionar palavra</p>
                 </button>
             </div>
@@ -47,12 +47,28 @@
             </div>
         </section>
 
+        <section class="add-palavra invisivel">
+            <div class="add-palavra-entrada">
+                <!-- <label for="palavra">Adicione uma palavra nova ao jogo: </label> -->
+                <input class="input-padrao nova-palavra" type="text" name="palavra" placeholder="Digite uma palavra...">
+                <input class="input-padrao nova-palavra-categoria" type="text" name="categoria" placeholder="Digite a categoria desta palavra...">
+                <span class="texto-padrao interrogacao" data-hover="A categoria é usada para dar a dica da palavra" tabindex="0">?</span>
+            </div>
+
+            <div class="add-erros"></div>
+
+            <div class="add-palavra-saida">
+                <button class="btn-padrao btn-adc"><p class="texto-padrao">Adicionar</p></button>
+                <button class="btn-padrao btn-sair"><p class="texto-padrao">Sair</p></button>
+            </div>
+        </section>
+
         <section class="jogo invisivel">
             <canvas id="tabuleiro" width="1200" height="550"></canvas>
             <button class="btn-padrao btn-reiniciar">
                 <p class="texto-padrao">Novo Jogo</p>
             </button>
-            <button class="btn-padrao btn-desistir btn-transparente">
+            <button class="btn-padrao btn-desistir">
                 <p class="texto-padrao">Desistir</p>
             </button>
         </section>
@@ -156,8 +172,8 @@
     <script src="./js/trocarCor.js"></script>
     <script src="./js/palavras.js"></script>
     <script src="./js/desenhaTabuleiro.js"></script>
-    <script src="./js/adicionarPalavra.js"></script>
     <script src="./js/jogar.js"></script>
+    <script src="./js/adicionarPalavra.js"></script>
 </body>
 
 </html>

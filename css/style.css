@@ -8,11 +8,13 @@ body {
     font-size: 16px;
     width: 100vw;
     height: 100vh;
+    background-color: var(--cor-fundo);
 
     /* Variáveis */
     --cor-destaque: #802bb1;
     --cor-fundo-principal-escuro: #121212;
     --cor-fundo-principal-claro: #dee4e7;
+    --cor-fundo: var(--cor-fundo-principal-escuro);
 
     --cor-titulo-escuro: #c3c2cf;
     --cor-texto-escuro: #cccbd1;
@@ -20,8 +22,8 @@ body {
     --cor-titulo-claro: #222222;
     --cor-texto-claro: #2f3030;
 
-    --cor-titulo-padrao: #c3c2cf;
-    --cor-texto-padrao: #cccbd1;
+    --cor-titulo-padrao: var(--cor-titulo-escuro);
+    --cor-texto-padrao: var(--cor-texto-escuro);
 
     transition: background-color .8s ease-in-out; 
 }
@@ -30,14 +32,14 @@ body {
     /* Fundo e texto */
     --cor-titulo-padrao: var(--cor-titulo-escuro);
     --cor-texto-padrao: var(--cor-texto-escuro);
-    background-color: var(--cor-fundo-principal-escuro);
+    --cor-fundo: var(--cor-fundo-principal-escuro);
     color: var(--cor-texto-padrao);
 }
 
 .modo-claro {
     --cor-titulo-padrao: var(--cor-titulo-claro);
     --cor-texto-padrao: var(--cor-texto-claro);
-    background-color: var(--cor-fundo-principal-claro);
+   --cor-fundo: var(--cor-fundo-principal-claro);
     color: var(--cor-texto-padrao);
 }
 
@@ -215,6 +217,140 @@ a {
     animation: animar-flecha 1s ease-in-out infinite alternate;
 }
 
+/* Estilização da tela para adicionar palavras */
+.add-palavra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.add-palavra-entrada {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.add-palavra .input-padrao {
+    width: 80%;
+    height: 4em;
+    margin: 1.5em auto;
+    outline: none;
+    border: none;
+    border-radius: 1.5em;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-padrao);
+    transition: background-color .8s ease;
+    font-weight: 600;
+    text-align: center;
+}
+
+.add-palavra .input-padrao:focus {
+    outline: 3px solid var(--cor-destaque);
+}
+
+.interrogacao {
+    display: inline-block;
+    position: relative;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    width: 1.1em;
+    height: 1.1em;
+    text-align: center;
+    color: var(--cor-texto-escuro);
+    margin: 0 0 1.5em 0;
+    transition: transform .2s linear;
+}
+
+.interrogacao:hover, .interrogacao:focus {
+    transform: scale(1.05);
+}
+
+.interrogacao::before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 10em;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em 0;
+    transition: opacity .3s ease-in-out;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: 2em;
+    left: 50;
+    transform: translateX(-50%);
+}
+
+.interrogacao:hover::before, .interrogacao:focus::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.add-erros {
+    text-align: center;
+    font-size: .85em;
+    font-weight: 400;
+    padding: 1.5em;
+    line-height: 2em;
+    opacity: 1;
+    transition: opacity 5s linear;
+}
+
+/* Animação de "shake" (sacudir) na palavra */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(15px);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.add-erros p {
+    animation: shake .8s ease-in 1;
+}
+
+
+.add-palavra-saida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.add-palavra-saida .btn-padrao {
+    margin: 0 1em;
+}
+
+.add-palavra-saida .btn-sair {
+    border: var(--cor-destaque) solid;
+    border-width: 0.25em;
+    background-color: transparent;
+}
+
+.add-palavra-saida .btn-sair .texto-padrao {
+    color: var(--cor-destaque);
+}
+
+
 /* Estilização do jogo */
 .jogo {
     width: 100vw;
@@ -296,6 +432,10 @@ footer {
     max-width: 100vw;
 }
 
+/* Tem que ficar aqui em baixo para funcionar corretamente */
+.invisivel {
+    display: none;
+}
 
 /* @media screen and (min-device-width: 359px) and (max-device-width: 450px) {
     #tabuleiro {
@@ -303,4 +443,3 @@ footer {
         height: 400px;
     }
 } */
-
