@@ -4,6 +4,7 @@ const sectInfo = document.querySelector(".info");
 const botaoJogar = document.querySelector(".btn-jogar");
 const botaoReiniciar = document.querySelector(".btn-reiniciar");
 const botaoDesistir = document.querySelector(".btn-desistir");
+const entradaMobile = document.querySelector(".entrada-mobile");
 
 botaoJogar.addEventListener("click", () => {
     menuInicial.classList.add("invisivel");
